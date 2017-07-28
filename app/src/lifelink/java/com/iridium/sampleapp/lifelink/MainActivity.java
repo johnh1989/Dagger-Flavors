@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.iridium.sampleapp.R;
 
@@ -28,5 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.i("MainActivityLifeLink", "string val is: " + greeting);
+        Toast.makeText(this, getApplication().getPackageName(), Toast.LENGTH_LONG).show();
     }
 }
