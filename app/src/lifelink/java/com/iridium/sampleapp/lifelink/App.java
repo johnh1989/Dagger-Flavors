@@ -21,16 +21,10 @@ public class App extends Application {
         component = buildComponent();
     }
 
-    private LifeLinkComponent buildComponent() {
-        if (BuildConfig.BUILD_TYPE.equals("mock")) {
-           return DaggerMockLifeLinkComponent.builder()
-                    .mockLifeLinkModule(new MockLifeLinkModule())
-                    .build();
-        } else {
-            return DaggerLifeLinkComponent.builder()
-                    .lifeLinkModule(new LifeLinkModule())
-                    .build();
-        }
+    protected LifeLinkComponent buildComponent() {
+        return DaggerLifeLinkComponent.builder()
+                .lifeLinkModule(new LifeLinkModule())
+                .build();
     }
 
     public LifeLinkComponent component() {

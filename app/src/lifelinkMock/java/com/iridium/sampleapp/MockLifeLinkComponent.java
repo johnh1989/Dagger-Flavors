@@ -1,4 +1,6 @@
-package com.iridium.sampleapp.lifelink;
+package com.iridium.sampleapp;
+
+import com.iridium.sampleapp.lifelink.LifeLinkComponent;
 
 import dagger.Component;
 

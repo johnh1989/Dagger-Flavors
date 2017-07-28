@@ -49,15 +49,6 @@ android {
             versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
             versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         }
-        mass {
-            applicationId "com.iridium.sampleapp.mass"
-            def versionMajor = 3
-            def versionMinor = 0
-            def versionPatch = 0
-
-            versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
-            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-        }
     }
 }
 
@@ -78,3 +69,4 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
+

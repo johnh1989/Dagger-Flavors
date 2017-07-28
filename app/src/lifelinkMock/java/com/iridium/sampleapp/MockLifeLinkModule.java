@@ -1,4 +1,4 @@
-package com.iridium.sampleapp.lifelink;
+package com.iridium.sampleapp;
 
 import dagger.Module;
 import dagger.Provides;
