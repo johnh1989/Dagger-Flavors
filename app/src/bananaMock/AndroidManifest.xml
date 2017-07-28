@@ -3,7 +3,7 @@
 
     <application
         tools:replace="android:name"
-        android:name="com.iridium.sampleapp.MockBananaApplication">
+        android:name="com.iridium.sampleapp.banana.MockBananaApplication">
         <activity android:name="com.iridium.sampleapp.banana.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

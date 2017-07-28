@@ -1,4 +1,4 @@
-package com.iridium.sampleapp;
+package com.iridium.sampleapp.banana;
 
 import dagger.Module;
 import dagger.Provides;

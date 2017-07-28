@@ -1,9 +1,6 @@
-package com.iridium.sampleapp;
+package com.iridium.sampleapp.banana;
 
 import android.util.Log;
-
-import com.iridium.sampleapp.banana.App;
-import com.iridium.sampleapp.banana.BananaComponent;
 
 
 /**
