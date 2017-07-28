@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.iridium.sampleapp"
+        minSdkVersion 21
+        targetSdkVersion 26
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            debuggable false
+        }
+
+        mock {
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")
+        }
+    }
+
+    productFlavors {
+        lifelink {
+            applicationId "com.iridium.sampleapp.lifelink"
+            def versionMajor = 1
+            def versionMinor = 0
+            def versionPatch = 0
+
+            versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        }
+        haven {
+            applicationId "com.iridium.sampleapp.haven"
+            def versionMajor = 2
+            def versionMinor = 0
+            def versionPatch = 10
+
+            versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        }
+        mass {
+            applicationId "com.iridium.sampleapp.mass"
+            def versionMajor = 3
+            def versionMinor = 0
+            def versionPatch = 0
+
+            versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //DI
+    compile 'javax.inject:javax.inject:1'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+    compile "com.google.dagger:dagger:2.9"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.9"
+    provided 'javax.annotation:jsr250-api:1.0'
+
+    testCompile 'junit:junit:4.12'
+}
